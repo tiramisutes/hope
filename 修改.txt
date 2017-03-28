@@ -1,0 +1,12 @@
+F:\hope\themes\jacman\layout\_partial\after_footer.ejs  修改分享标签
+F:\hope\themes\jacman\layout\_partial\post\pagination.ejs 修改上一篇和下一篇
+F:\hope\themes\jacman\layout\_partial\footer.ejs 修改底部内容，gostats网站统计
+F:\hope\themes\jacman\languages\default.yml 修改blog语言
+F:\hope\themes\jacman\layout\_partial\search.ejs  修改搜索结果
+F:\hope\themes\jacman\layout\_partial\head.ejs   添加<link href="/css/font-awesome.min.css" rel="stylesheet"><link href="/css/font-awesome.min.css" rel="stylesheet">用来显示小图标（http://www.bootcss.com/p/font-awesome/#integration）
+F:\hope\themes\jacman\source\font   修改字体文件
+F:\hope\themes\jacman\source\css    修改字体相应的css
+F:\hope\themes\jacman\layout\_partial\header.ejs   修改目录并添加图标
+F:\hope\themes\jacman\layout\_partial\head.ejs     修改index.html首页<head>..</head>间内容，添加百度统计和百度谷歌网站验证码
+F:\hope\scripts\new.js                             hexo new 新建文章后自动用编辑器打开
+F:\hope\themes\next\languages                      修改mean内容

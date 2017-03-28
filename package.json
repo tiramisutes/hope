@@ -1,0 +1,52 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "hexo": {
+    "version": "3.1.1"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-htmlclean": "^2.7.6",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.0",
+    "gulp-uglify": "^2.0.0",
+    "hexo": "^3.1.0",
+    "hexo-deployer-git": "0.0.4",
+    "hexo-generator-archive": "^0.1.2",
+    "hexo-generator-baidu-sitemap": "^0.1.2",
+    "hexo-generator-category": "^0.1.2",
+    "hexo-generator-feed": "^1.2.0",
+    "hexo-generator-index": "^0.1.2",
+    "hexo-generator-search": "^1.0.2",
+    "hexo-generator-sitemap": "^1.1.2",
+    "hexo-generator-tag": "^0.1.1",
+    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-marked": "^0.2.4",
+    "hexo-renderer-stylus": "^0.2.0",
+    "hexo-server": "^0.1.2",
+    "hexo-tag-imgurgal": "^1.1.1",
+    "hexo-wordcount": "^1.2.0",
+    "minimatch": "^3.0.2",
+    "shelljs": "^0.7.7"
+  },
+  "description": "F:\\hope\\scripts\\new.js        hexo new 新建文章后自动用编辑器打开\r # hope\r 备份上传github命令\r git init\r git add .\r git commit -m \"添加hexo源码文件作为备份\"\r git remote add origin https://github.com/tiramisutes/hope.git\r git push -u origin master\r 现在在任何一台电脑上，只需要git clone git@github.com:tiramisutes/hope.git,即可完成将Hexo源文件复制到本地。\r 在本地编写完博客时，顺次执行以下命令，即可完成Hexo博客源文件的更新同步，保持Github上的hexo源码为最新版本。\r git add .\r git commit -m \"更新hexo源文件\"\r git push origin master",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiramisutes/hope.git"
+  },
+  "author": "xzp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiramisutes/hope/issues"
+  },
+  "homepage": "https://github.com/tiramisutes/hope#readme"
+}
