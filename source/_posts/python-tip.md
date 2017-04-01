@@ -5,6 +5,7 @@ date: 2017-03-25 16:17:03
 tags: python-tip
 categories: Python
 ---
+**以下总结是基于python2.7，在其他版本中是否可行没有验证。**
 ##多行字符串转换为单行
 ``` bash
 string = 'this is \n a \t          example'
@@ -167,6 +168,67 @@ class Student (object):
 sd.__name
 sd._Student__name
 ```
+---
+##\*args and **kwargs
+<i class="fa fa-link" aria-hidden="true"></i>[Python函数可变参数args及kwargs释义](http://lovesoo.org/python-han-shu-ke-bian-can-shu-args-ji-kwargs-shi-yi.html)
+<strong>\*args表示任何多个无名参数，它是一个tuple</strong>
+<strong>\**kwargs表示关键字参数，它是一个dict</strong>
+```
+def foo(*args,**kwargs):
+    print 'args=',args
+    print 'kwargs=',kwargs
+    print '**********************'
+ 
+if __name__=='__main__':
+    foo(1,2,3)
+    foo(a=1,b=2,c=3)
+	
+#结果如下：
+args= (1, 2, 3)
+kwargs= {}
+**********************
+args= ()
+kwargs= {'a': 1, 'c': 3, 'b': 2}
+**********************
+```
+You can pass a default value to get() for keys that are not in the dictionary:
+<i class="fa fa-link" aria-hidden="true"></i>[Proper way to use **kwargs in Python](http://stackoverflow.com/questions/1098549/proper-way-to-use-kwargs-in-python)
+```
+val2 = kwargs.get('val2',"default value")
+val2 = kwargs.get('val2',None)
+```
+---
+##除法运算
+```
+>>> print 5*(2/6)
+0
+```
+运行结果总是0，WHY? 
+查找资料发现在Python里，整数初整数，只能得出整数。也就是 2 除 6 这个结果永远是0；
+事实上不光python这样处理，C/C++，R也都是这样的，因为整数和浮点数本来就是两回事，用来计算除法的部件也不是同一个。
+**解决办法：**
+1\. 如果想做浮点除法，就应该把至少一个操作数转化为浮点型。最简单的方法就是在后面加上``.0``。
+2\. 用类型转换的方法：``(float)2/6``。
+3\. 代码开头加上 ``from __future__ import division``，在python3.0以后的版本中不存在这种情况的。
+###小数点位数
+<i class="fa fa-link" aria-hidden="true"></i>[谈谈关于Python里面小数点精度控制的问题](http://www.cnblogs.com/herbert/p/3402245.html)
+至于保留小数点后位数可以通过内置函数``round()``和使用格式化,如``"%.2f" % 2.645``；
+round()如果只有一个数作为参数，不指定位数的时候，返回的是一个整数，而且是最靠近的整数（这点上类似四舍五入）。但是当出现.5的时候，两边的距离都一样，round()取靠近的偶数；
+当指定取舍的小数点位数的时候，一般情况也是使用四舍五入的规则，但是碰到.5的这样情况，如果要取舍的位数前的小树是奇数，则直接舍弃，如果偶数这向上取舍。
+```
+>>> round(2.635, 2)
+2.63
+>>> round(2.645, 2)
+2.65
+```
+python默认的是17位小数的精度，但是这里有一个问题，就是当我们的计算需要使用更高的精度（超过17位小数）的时候可以使用**高精度decimal模块，配合getcontext**。
+###特殊取整
+math模块的ceil(x) : 取大于或者等于x的最小整数；
+math模块的floor(x) : 取小于或者等于x的最大整数。
+
+---
+
+
 
 贡献来源
 
