@@ -1,4 +1,4 @@
-title: python技巧总结
+title: python技巧总结（持续更新）
 Total word: WordCount
 Read time: Min2Read
 date: 2017-03-25 16:17:03
@@ -11,7 +11,7 @@ categories: Python
 string = 'this is \n a \t          example'
 string = ' '.join(string.split())
 ```
-**这里split不传入参数，那么，这个函数会将以空白分开，空白包括：\n, \t , ' ',等，最终再，用空格来连接起来，也可以指定分隔符，如string.split(';')**
+**这里split不传入参数，那么这个函数会将以空白分开，空白包括：\n, \t , ' ',等，最终再用空格来连接起来，也可以指定分隔符，如string.split(';')**
 可以自己写个函数来处理，利用lambda表达式：
 ``` bash
 processFunc = lambda s: " ".join(s.split())
@@ -227,6 +227,100 @@ math模块的ceil(x) : 取大于或者等于x的最小整数；
 math模块的floor(x) : 取小于或者等于x的最大整数。
 
 ---
+##列表操作
+<i class="fa fa-link" aria-hidden="true"></i>[What is the syntax to insert one list into another list in python?](http://stackoverflow.com/questions/3748063/what-is-the-syntax-to-insert-one-list-into-another-list-in-python)
+###列表加法运算merge
+```
+>>> x = [1,2,3]
+>>> y = [4,5,6]
+>>> x + y
+[1, 2, 3, 4, 5, 6]
+>>> x.extend(y)
+>>> x
+[1, 2, 3, 4, 5, 6] 
+```
+**To extend a list at a specific insertion point you can use list slicing**
+```
+>>> x[2:2] = ['a','b']
+>>> x
+[1, 2, 'a', 'b', 3]
+```
+***List slicing is quite flexible as it allows to replace a range of entries in a list with a range of entries from another list*
+```
+>>> x[1:2] = ['a','b']
+>>> x
+[1, 'a', 'b', 3]
+```
+###列表附加append
+```
+>>> x = [1,2,3]
+>>> y = [4,5,6]
+>>> x.append(y)
+>>> x
+[1, 2, 3, [4, 5, 6]]
+```
+###插入insert
+```
+>>> x.insert(2, y)
+>>> x
+[1, 2, [4, 5, 6], 3]
+```
+###计数count
+```
+>>> x = [1,2,3,2,2]
+>>> x.count(2)
+3
+```
+###索引index
+```
+>>> x.index(2)
+1
+```
+###反转reverse
+```
+>>> x.reverse()
+>>> x
+[2, 2, 3, 2, 1]
+```
+其他还有``list.remove(x)``移除第一个item,``list.pop([i])``删除给定位置item,``list.clear()``,``list.sort(key=None, reverse=False)``,``list.copy()``。
+###List Comprehensions
+```
+[(x,y) for x in [1,2,3] for y in [4,2,6] if x !=y]
+```
+
+---
+##eval和ast.literal_eval
+<i class="fa fa-link" aria-hidden="true"></i>[Using python's eval() vs. ast.literal_eval()?](http://stackoverflow.com/questions/15197673/using-pythons-eval-vs-ast-literal-eval)
+eval是Python用于执行python表达式的一个内置函数，使用eval，可以很方便的将字符串动态执行,即将字符串str当成有效的表达式来求值并返回计算结果。
+```
+>>> eval("5+2")
+7
+>>> eval("[x for x in range(5)]")
+[0, 1, 2, 3, 4]
+>>>a = "[[1,2], [9,0]]"
+>>> b = eval(a)
+>>> print b
+[[1, 2], [9, 0]]
+```
+**“安全”使用eval**
+Eval函数的声明为``eval(expression[, globals[, locals]])``,第二三个参数分别指定能够在eval中使用的函数等，如果不指定，默认为globals()和locals()函数中 包含的模块和函数。
+但``eval``的使用存在安全隐患，具体See also <a href="http://nedbatchelder.com/blog/201206/eval_really_is_dangerous.html" rel="noreferrer">the dangers of <code>eval</code></a>。
+因此，**Use ``ast.literal_eval`` whenever you need eval.``ast.literal_eval`` raises an exception if the input isn't a valid Python datatype, so the code won't be executed if it's not.**
+
+---
+##zip函数
+<i class="fa fa-link" aria-hidden="true"></i>[Python零碎知识(2):强大的zip](http://www.cnblogs.com/BeginMan/archive/2013/03/14/2959447.html)
+1\. 接受一系列可迭代对象作为参数，将对象中对应的元素打包成一个个tuple（元组），然后返回由这些tuples组成的list（列表）。若传入参数的长度不等，则返回list的长度和参数中长度最短的对象相同;
+2\. zip()配合*号操作符,可以将已经zip过的列表对象解压;
+
+---
+##String slices
+<i class="fa fa-link" aria-hidden="true"></i>[Chapter 8  Strings](http://www.greenteapress.com/thinkpython/html/thinkpython009.html#toc89)
+The operator [n:m] returns the part of the string from the “n-eth” character to the “m-eth” character, including the first but excluding the last. This behavior is counterintuitive, but it might help to imagine the indices pointing between the characters.
+![](http://7xk19o.com1.z0.glb.clouddn.com/String%20slices.png)
+
+---
+
 
 
 
