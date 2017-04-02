@@ -5,7 +5,9 @@ date: 2017-03-25 16:17:03
 tags: python-tip
 categories: Python
 ---
+![](http://7xk19o.com1.z0.glb.clouddn.com/Preferred-for-Web-development.png)
 **以下总结是基于python2.7，在其他版本中是否可行没有验证。**
+<!--more-->
 ##多行字符串转换为单行
 ``` bash
 string = 'this is \n a \t          example'

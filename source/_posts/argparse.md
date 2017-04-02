@@ -5,7 +5,9 @@ date: 2017-03-25 12:55:35
 tags: argparse
 categories: Python
 ---
+![](http://7xk19o.com1.z0.glb.clouddn.com/python-build-your-security-toolspdf-47-638.jpg)
 argparse是python用于解析命令行参数和选项的标准模块，用于代替已经过时的optparse模块。argparse模块的作用是用于在python解析命令行参数。
+<!--more-->
 基本用法：
 ```
 import argparse
