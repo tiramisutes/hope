@@ -1,4 +1,4 @@
-title: Linux定时备份数据到百度云盘
+title: Linux和windows定时备份数据到百度云盘
 date: 2015-07-28 22:22:09
 tags: Linux_backup
 categories: Linux
