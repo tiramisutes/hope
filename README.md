@@ -1,7 +1,9 @@
 # hope
 ##新建
+
 ``F:\hope\scripts\new.js``        hexo new 新建文章后自动用编辑器打开
 ##备份
+
 备份上传github命令
 ```r
 git init
