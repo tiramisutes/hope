@@ -15,7 +15,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://tiramisutes.github.io/
 root: /
-permalink: :year/:month/:day/:title.html  #文章的链接格式
+permalink: :year/:month/:day/:title.html  #脦脛脮脗碌脛脕麓陆脫赂帽脢陆
 permalink_defaults:
 about_dir: about
 
@@ -77,7 +77,7 @@ deploy:
 plugins:
   - hexo-generator-sitemap
   - hexo-generator-feed
-# 自动生成sitemap
+# 脳脭露炉脡煤鲁脡sitemap
 sitemap:
 path: sitemap.xml
 baidusitemap:
