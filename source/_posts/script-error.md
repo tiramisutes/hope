@@ -29,3 +29,10 @@ npm config set proxy null
 npm config set https-proxy null
 npm install -g XXXX
 ```
+##python报错
+``re``模块正则匹配时报错
+```
+AttributeError: 'NoneType' object has no attribute 'group'
+```
+**<a href="http://www.cnblogs.com/zhoujinyi/p/3159903.html" target="_blank">解决办法</a>**
+写的正则表达式匹配不到任何内容，检查正则表达式正确性。

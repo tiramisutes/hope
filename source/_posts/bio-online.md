@@ -3,7 +3,7 @@ date: 2015-08-05 19:19:40
 tags: bio-online
 categories: Bioinformatics
 ---
-<i class="fa fa-volume-control-phone" aria-hidden="true"></i>**声明：本文所列工具均为较为初级的生物信息分析，只用于简单的分析过程，更加优秀的工具和准确的分析结果我也在不懈寻找中，同样也欢迎大家留言提供，一个分析结果最好是能够综合不同方式所得结果。**
+<i class="fa fa-volume-control-phone" aria-hidden="true"></i>**声明：本文所列工具均为较为初级的生物信息分析，只用于简单的分析过程，更加优秀的工具和准确的分析结果我也在不懈寻找中，同样也欢迎大家留言提供，一个分析结果最好是能够综合不同方式所得结果。**:herb:
 ###韦恩图
 <a href="http://bioinfogp.cnb.csic.es/tools/venny/index.html" target="_blank">Venny2.0</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/ven.png)
@@ -53,6 +53,11 @@ categories: Bioinformatics
 <a href="http://pfam.xfam.org/" target="_blank">Pfam database</a>
 <a href="http://meme-suite.org/tools/meme" target="_blank">meme:Multiple Em for Motif Elicitation</a>
 <a href="http://smart.embl-heidelberg.de/smart/job_status.pl?jobid=2202499913219771481699820TuJCLAnhyf" target="_blank">SMART</a>
+1\. 模体(motif)
+属于蛋白质的超二级结构，由2个或2个以上具有二级结构的的肽段，在空间上相互接近，形成一个特殊的空间构象，并发挥专一的功能。一种类型的模体总有其特征性的氨基酸序列。
+模体是二级结构有规律的组合。例如螺旋-环-螺旋，贝塔折叠的组合、阿而法螺旋组合等。再比如亮氨酸拉链、锌指结构都是典型的模体，它们执行一定的功能，即模体即是结构的单位，又是功能单位，他们可直接作为结构域和三级结构的建筑块。某些蛋白质因子与DNA大沟结合的部位靠的就是某些特异的模体。
+2\. 结构域（domain）
+是指在较大的分子（主要指蛋白质也包括核酸分子）中形成的某些在空间上可以辨别的结构，往往是球状压缩区或纤维状压缩区。它们也既是结构单位，又是功能单位。例如免疫球蛋白的功能区就是结构域。
 ![](http://7xk19o.com1.z0.glb.clouddn.com/Pfam.png)
 ###基因组杂合性评估
 <a href="http://qb.cshl.edu/genomescope/analysis.php?code=example2" target="_blank">GenomeScope：Estimate genome heterozygosity, repeat content, and size from sequencing reads using a kmer-based statistical approach</a>
@@ -100,3 +105,12 @@ S12	NApulia
 ### 基因结构展示
 <a href="http://gsds.cbi.pku.edu.cn/index.php" target="_blank">GSDS2.0: Gene Structure Display Server</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/GSDS.png)
+[AnnotationSketch](http://genometools.org/cgi-bin/annotationsketch_demo.cgi)
+![](http://7xk19o.com1.z0.glb.clouddn.com/callbacks.png)
+### 外显子-内含子结构
+[Exon-Intron Graphic Maker](http://wormweb.org/exonintron)
+[MyDomains](http://prosite.expasy.org/cgi-bin/prosite/mydomains/)
+[DomainDraw draws ](http://domaindraw.imb.uq.edu.au./)
+###蛋白突变位点注释
+[MutationMapper: interprets mutations with protein annotations](http://www.cbioportal.org/mutation_mapper.jsp)
+![](http://7xk19o.com1.z0.glb.clouddn.com/M.png)

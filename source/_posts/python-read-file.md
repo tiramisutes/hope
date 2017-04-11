@@ -21,6 +21,19 @@ with open('myfile') as f:
 for line in open('myfile','r').readlines():
     do_something(line)
 ```
+**二者的区别是``readlines``读进来的是列表，而``readline``是字符串；**
+```
+>>> import re
+... with open('zsq.txt') as f:
+...     lines = f.readlines()
+...     print type(lines)
+<type 'list'>
+>>> import re
+... with open('zsq.txt') as f:
+...     lines = f.readline()
+...     print type(lines)
+<type 'str'>
+```
 
 ---
 ##大文件
