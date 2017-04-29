@@ -83,3 +83,5 @@ hexo server --port=4001
 Contribution from ：
 http://www.jianshu.com/p/1e402922ee32
 http://daringfireball.net/projects/markdown/basics
+https://guides.github.com/features/mastering-markdown/
+http://blog.csdn.net/microcosmv/article/details/51868284

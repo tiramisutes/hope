@@ -49,10 +49,11 @@ categories: Bioinformatics
 ### 绘制GO注释结果
 <a href="http://wego.genomics.org.cn/cgi-bin/wego/index.pl" target="_blank">WEGO：Web Gene Ontology Annotation Plotting</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/wego.png)
-###蛋白质domain
-<a href="http://pfam.xfam.org/" target="_blank">Pfam database</a>
+###蛋白质
+<a href="http://pfam.xfam.org/search#tabview=tab1" target="_blank">Pfam database</a>
 <a href="http://meme-suite.org/tools/meme" target="_blank">meme:Multiple Em for Motif Elicitation</a>
 <a href="http://smart.embl-heidelberg.de/smart/job_status.pl?jobid=2202499913219771481699820TuJCLAnhyf" target="_blank">SMART</a>
+[Conserved Domains within a protein or coding nucleotide sequence](https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi)
 1\. 模体(motif)
 属于蛋白质的超二级结构，由2个或2个以上具有二级结构的的肽段，在空间上相互接近，形成一个特殊的空间构象，并发挥专一的功能。一种类型的模体总有其特征性的氨基酸序列。
 模体是二级结构有规律的组合。例如螺旋-环-螺旋，贝塔折叠的组合、阿而法螺旋组合等。再比如亮氨酸拉链、锌指结构都是典型的模体，它们执行一定的功能，即模体即是结构的单位，又是功能单位，他们可直接作为结构域和三级结构的建筑块。某些蛋白质因子与DNA大沟结合的部位靠的就是某些特异的模体。
