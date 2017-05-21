@@ -215,9 +215,12 @@ d = c(26,44,20,32)
 strains.frame = data.frame(a, b, c, d)
 strains = stack(strains.frame)  #stack是reshape2包中的一个函数，用于将宽格式数据转化为长格式；
 colnames(strains) = c("weight", "group")
+##常规的两两相互比较计算
+TukeyHSD( aov(weight ~ group, data=strains) )
 library(multcomp)
 summary(glht(aov(weight ~ group, data=strains), linfct=mcp(group="Dunnett")))
-##The first group ("a" in this example) is used as the reference group. If this is not the case, use the relevel() command to set the reference.
+## The first group ("a" in this example) is used as the reference group. 
+## If this is not the case, use the relevel() command to set the reference.
 strains$group = relevel(strains$group, "b")
 summary(glht(aov(weight ~ group, data=strains), linfct=mcp(group="Dunnett")))
 plot(glht(aov(weight ~ group, data=strains), linfct=mcp(group="Dunnett")))
