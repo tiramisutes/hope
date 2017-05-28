@@ -31,8 +31,8 @@ categories: Bioinformatics
 <a href="http://www.cbs.dtu.dk/services/TMHMM/" target="_blank">TMHMM Server v. 2.0</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/tmhmm.png)
 ### 蛋白质亚细胞定位
-<a href="http://psort.hgc.jp/form2.html" target="_blank">PSORT II Prediction</a>
-![](http://7xk19o.com1.z0.glb.clouddn.com/PSORT%20II%20Prediction.png)
+<a href="http://www.cbs.dtu.dk/services/TargetP/" target="_blank">TargetP 1.1 Server</a>
+![](http://7xk19o.com1.z0.glb.clouddn.com/%E4%BA%9A%E7%BB%86%E8%83%9E.png)
 ### 蛋白质二级结构分析
 <a href="https://npsa-prabi.ibcp.fr/cgi-bin/npsa_automat.pl?page=npsa_sopma.html" target="_blank">SOPMA</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/sopma.png)

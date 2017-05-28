@@ -2,8 +2,8 @@ title: Single Cell全基因组扩增
 Total word: WordCount
 Read time: Min2Read
 date: 2016-10-13 20:44:53
-tags:
-categories:
+tags: WGA
+categories: Single-cell
 ---
 单细胞测序得以实现或者测序质量的提升得益于whole-genome amplification (WGA)，WGA方法存在较大的扩增偏好性（**偏好性来源于序列本身GC含量和非线性扩增过程**），导致低的基因组覆盖度；
 ##全基因组扩增WGA
