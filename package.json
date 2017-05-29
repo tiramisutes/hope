@@ -28,7 +28,8 @@
     "hexo-renderer-stylus": "^0.2.0",
     "hexo-server": "^0.1.2",
     "hexo-tag-imgurgal": "^1.1.1",
-    "hexo-wordcount": "^1.2.0",
+    "hexo-util": "^0.6.0",
+    "hexo-wordcount": "^1.2.3",
     "minimatch": "^3.0.2",
     "shelljs": "^0.7.7"
   },
