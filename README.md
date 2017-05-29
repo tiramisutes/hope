@@ -28,4 +28,8 @@ git push origin master
 https://notes.wanghao.work/2015-07-06-自动备份Hexo博客源文件.html
 
 ---
+<<<<<<< HEAD
 然后每次更新博文并hexo deploy到服务器上之后，备份就自动启动并完成本地博客源文件的github备份。
+=======
+然后每次更新博文并hexo deploy到服务器上之后，备份就自动启动并完成本地博客源文件的github备份。
+>>>>>>> 763cea4b05cfa76f788d064ac9e4cb501be684ce
