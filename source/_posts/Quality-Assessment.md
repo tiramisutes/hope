@@ -53,3 +53,20 @@ python BUSCO.py -i SEQUENCE_FILE -o OUTPUT_NAME -l LINEAGE -m tran
 SEQUENCE_FILE： transcript set (DNA nucleotide sequences) file in FASTA format
 OUTPUT_NAME： name to use for the run and temporary files (appended)
 LINEAGE： location of the BUSCO lineage data to use (e.g. fungi_odb9)
+**察看结果: 在运行结果文件夹下``short_summary_OUTPUT_NAME.txt``中有如下统计信息👇**
+```
+C:80.0%[S:80.0%,D:0.0%],F:0.0%,M:20.0%,n:10
+
+8 Complete BUSCOs (C)
+8 Complete and single-copy BUSCOs (S)
+0 Complete and duplicated BUSCOs (D)
+0 Fragmented BUSCOs (F)
+2 Missing BUSCOs (M)
+10 Total BUSCO groups searched
+```
+也可图像化展示结果👇：
+```
+cp short_summary_OUTPUT_NAME.txt ./plot
+python2.7 BUSCO_plot.py -wd ./busco/plot/
+```
+![](http://7xk19o.com1.z0.glb.clouddn.com/busco2.png)

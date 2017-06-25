@@ -36,3 +36,10 @@ AttributeError: 'NoneType' object has no attribute 'group'
 ```
 **<a href="http://www.cnblogs.com/zhoujinyi/p/3159903.html" target="_blank">解决办法</a>**
 写的正则表达式匹配不到任何内容，检查正则表达式正确性。
+##生信软件安装报错
+make编译过程报错
+```
+error: ‘getpid’ was not declared in this scope
+```
+[解决办法](https://stackoverflow.com/questions/34823393/linux-getpid-system-call-error)
+添加``#include <unistd.h>``在相应报错的XX.cpp文件头部

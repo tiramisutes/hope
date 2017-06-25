@@ -6,12 +6,12 @@ tags: Circos
 categories: Bioinformatics
 ---
 ##安装主页
-
 ![](http://i.imgur.com/XrKrXqj.jpg)
 ##### [安装主页](http://www.circos.ca/documentation/tutorials/configuration/)
 ##### [已发表文章circos图](http://circos.ca/images/scientific_literature/)(http://circos.ca/in_literature/scientific/)
 ##### [教程和数据下载](http://www.circos.ca/software/download/tutorials/)
 ##### [Creating Circos Plots](http://jura.wi.mit.edu/bio/education/hot_topics/Circos/Circos.pdf)
+<!--more-->
 ---
 ###[下载最新版circos](http://circos.ca/software/download/circos/)
 ```
