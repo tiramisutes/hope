@@ -1,23 +1,23 @@
-title: De Nove杞綍缁勭粍瑁呰川閲忚瘎浼?
+title: De Nove转录组组装质量评估
 Total word: WordCount
 Read time: Min2Read
 date: 2016-10-30 23:00:17
 tags: De Nove
 categories: Bioinformatics
 ---
-鏃犲弬De Nove缁勮閫氬父鐢ㄥ埌**<a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki" target="_blank">Trinity</a>**杞欢,缁勮杩囩▼涓渶閲嶈鐨勪袱涓弬鏁板氨鏄?
-<span class="myCode">--min_kmer_cov</span>鍜?span class="myCode">--min_glue</span>銆備负缁勮鍑洪珮璐ㄩ噺缁撴灉鎴戜滑閫氬父闇€瑕佸幓灏濊瘯鐢ㄤ笉鍚岀殑鍙傛暟锛実ithub涓婁篃鏈夎蒋浠跺紑鍙戣€呰璁哄叧浜庤繖涓や釜鍙傛暟锛?*<a href="https://github.com/trinityrnaseq/trinityrnaseq/issues/92" target="_blank">Optimizing parameters</a>**鍙緵鍙傝€冿紝鍏跺疄闂鏈€缁堜篃灏卞綊缁撲负浣犳槸鍚﹀叧蹇冧綘鏁版嵁涓殑浣庝赴搴﹁浆褰曟湰銆?
-姝ゅ浣滆€呬篃鎻愪緵浜嗕竴绯诲垪鏂规硶鏉ヨ瘎浼扮粍瑁呰川閲?*<a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki/Transcriptome-Assembly-Quality-Assessment" target="_blank">Transcriptome Assembly Quality Assessment</a>**锛屾€诲叡鍒楀嚭鏈?绉嶆柟娉曞彲瀵逛笉鍚屽弬鏁扮殑缁勮缁撴灉杩涜璇勪及,鐪嬪畬鍚庣患鍚堟€荤粨鍑哄叾涓?绉嶈瘎浼版柟娉曘€?
+无参De Nove组装通常用到**<a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki" target="_blank">Trinity</a>**软件,组装过程中最重要的两个参数就是
+``--min_kmer_cov`` 和 ``--min_glue``为组装出高质量结果我们通常需要去尝试用不同的参数，github上也有软件开发者讨论关于这两个参数**<a href="https://github.com/trinityrnaseq/trinityrnaseq/issues/92" target="_blank">Optimizing parameters</a>**可供参考，其实问题最终也就归结为你是否关心你数据中的低丰度转录本?
+此外作者也提供了一系列方法来评估组装质量**<a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki/Transcriptome-Assembly-Quality-Assessment" target="_blank">Transcriptome Assembly Quality Assessment</a>**总共列出6种方法可对不同参数的组装结果进行评估,看完后综合总结出其中4种评估方法。
 ##Assessing the Read Content of the Transcriptome Assembly
 ``` bash
 bowtie2-build  ../trinity_out_dir${i}/Trinity.fasta ../trinity_out_dir${i}/Trinity.fasta
 bowtie2 --local --no-unal -p ${cpu} -x  ../trinity_out_dir${i}/Trinity.fasta -q -1 ${left} -2 ${right} \
      | samtools view -Sb - | samtools sort -no - - > bowtie2.nameSorted.bam
-#鍙傜湅proper pairs reads鏁伴噺鍜岀櫨鍒嗘瘮
+#参看proper pairs reads数量和百分比
 ${TRINITY_DIR}/util/SAM_nameSorted_to_uniq_count_stats.pl  bowtie2.nameSorted.bam
 grep "^proper_pairs" Read-Representation.out
 ```
-**绗簩姝ョ殑bowtie2姣斿搴忓垪鍒扮粍瑁呰浆褰曟湰缁撴灉鏃跺彲閫夐儴鍒嗘暟鎹潵姣斿锛岃繖鏍峰彲澶уぇ闄嶄綆姣斿鑰楁椂銆?*
+**第二步的bowtie2比对序列到组装转录本结果时可选部分数据来比对，这样可大大降低比对耗时。**
 ##Full-length transcript analysis for model and non-model organisms using BLAST+
 ``` bash
 blastall -p blastx -i ./trinity_out_dir${i}/Trinity.fasta  -d ${uniprot} -v 1 -b 1 -m 8 -e 1e-5 -a ${cpu} -F F -o uniprot_sprot.fasta_blastx.outfmt8
@@ -27,7 +27,7 @@ ${TRINITY_DIR}/util/misc/blast_outfmt6_group_segments.pl \
 ${TRINITY_DIR}/util/misc/blast_outfmt6_group_segments.tophit_coverage.pl ./uniprot_sprot.fasta_blastx.outfmt8.grouped
 ```
 ##Compute DETONATE scores
-RSEM-EVAL杞欢瀵逛簬鍙岀reads鏁版嵁闇€瑕佹彁渚涗竴涓猘verage fragment length鍊硷紝鍙弬鑰冩垜鐨勫彟涓€绡囧崥鏂?*<a href="http://tiramisutes.github.io/2016/09/19/Insert-Size.html" target="_blank">璇勪及鏂囧簱 Average Insert Size</a>**鏉ヨ绠楀緱鍒版鍊笺€?
+RSEM-EVAL软件对于双端reads数据需要提供一个average fragment length值，可参考我的另一篇博文**<a href="http://tiramisutes.github.io/2016/09/19/Insert-Size.html" target="_blank">评估文库 Average Insert Size</a>**来计算得到此值。
 ``` bash
 rsem-eval-estimate-transcript-length-distribution ./trinity_out_dir${i}/Trinity.fasta ./RSEM-EVAL${i}/length_distribution_parameter.txt
 rsem-eval/rsem-eval-calculate-score -p 1 \
@@ -36,24 +36,24 @@ rsem-eval/rsem-eval-calculate-score -p 1 \
               ./trinity_out_dir${i}/Trinity.fasta \
               hope-trinity_out_dir${i} 300
 ```
-璇勪及缁撴灉瑙ｉ噴瑙侊細**<a href="http://deweylab.biostat.wisc.edu/detonate/rsem-eval.html" target="_blank">RSEM-EVAL: A novel reference-free transcriptome assembly evaluation measure</a>**銆?
+评估结果解释见：**<a href="http://deweylab.biostat.wisc.edu/detonate/rsem-eval.html" target="_blank">RSEM-EVAL: A novel reference-free transcriptome assembly evaluation measure</a>**。
 
 <li>RSEM-EVAL produces the following three score related files: 'sample_name.score', 'sample_name.score.isoforms.results' and 'sample_name.score.genes.results'.</li>
-<li>'sample_name.score' stores the evaluation score for the evaluated assembly. The first lines Score锛歵he RSEM-EVAL score.</li>
+<li>``sample_name.score``： stores the evaluation score for the evaluated assembly. The first lines Score the RSEM-EVAL score.</li>
 <li>Higher RSEM-EVAL scores are better than lower scores. This is true despite the fact that the scores are always negative. For example, a score of -80000 is better than a score of -200000, since -80000 > -200000.</li>
 ##BUSCO explore completeness according to conserved ortholog
 ``` bash
 git clone https://gitlab.com/ezlab/busco.git
 ```
-鐐瑰嚮**<a href="http://busco.ezlab.org/" target="_blank">BUSCO瀹樼綉</a>**鐩稿簲鍥炬爣涓嬭浇鎵€闇€鏁版嵁搴撱€?
+点击**<a href="http://busco.ezlab.org/" target="_blank">BUSCO官网</a>**相应图标下载所需数据库。
 ![](http://7xk19o.com1.z0.glb.clouddn.com/busco.png)
 ``` bash
 python BUSCO.py -i SEQUENCE_FILE -o OUTPUT_NAME -l LINEAGE -m tran
 ```
-SEQUENCE_FILE锛?transcript set (DNA nucleotide sequences) file in FASTA format
-OUTPUT_NAME锛?name to use for the run and temporary files (appended)
-LINEAGE锛?location of the BUSCO lineage data to use (e.g. fungi_odb9)
-**瀵熺湅缁撴灉: 鍦ㄨ繍琛岀粨鏋滄枃浠跺す涓媊`short_summary_OUTPUT_NAME.txt``涓湁濡備笅缁熻淇℃伅馃憞**
+SEQUENCE_FILE：transcript set (DNA nucleotide sequences) file in FASTA format
+OUTPUT_NAME：name to use for the run and temporary files (appended)
+LINEAGE：location of the BUSCO lineage data to use (e.g. fungi_odb9)
+**察看结果: 在运行结果文件夹下``short_summary_OUTPUT_NAME.txt``中有如下统计信息👇**
 ```
 C:80.0%[S:80.0%,D:0.0%],F:0.0%,M:20.0%,n:10
 
@@ -64,7 +64,7 @@ C:80.0%[S:80.0%,D:0.0%],F:0.0%,M:20.0%,n:10
 2 Missing BUSCOs (M)
 10 Total BUSCO groups searched
 ```
-涔熷彲鍥惧儚鍖栧睍绀虹粨鏋滒煈囷細
+也可图像化展示结果👇：
 ```
 cp short_summary_OUTPUT_NAME.txt ./plot
 python2.7 BUSCO_plot.py -wd ./busco/plot/
