@@ -1,4 +1,4 @@
-title: 非Root用户GLIBC安装“排雷”过程
+title: AUGUSTUS安装和非Root用户GLIBC“排雷”过程
 Total word: WordCount
 Read time: Min2Read
 date: 2017-01-06 15:40:43
@@ -110,6 +110,52 @@ export LD_LIBRARY_PATH=/opt/glibc-2.14/lib:$LD_LIBRARY_PATH
 <i class="fa fa-desktop" aria-hidden="true"></i>PATH和LD_LIBRARY_PATH区别
 PATH:  可执行程序的查找路径；
 LD_LIBRARY_PATH: 动态库的查找路径；
+##再安装AUGUSTUS
+上述关于GLIBC安装虽已失败告终，但AUGUSTUS的安装参考[Installing Augustus with manual bamtools installation](https://iamphioxus.org/2017/05/08/installing-augustus-with-manual-bamtools-installation/)后得到解决。
+**1. 主要是无root权限下先安装依赖工具bam2hints 和 filterBam👇**
+```
+git clone git://github.com/pezmaster31/bamtools.git
+mkdir build
+cd build
+cmake ..
+make
+```
+**2.修改AUGUSTUS中部分MakeFile文件**
+首先修改``augustus-3.2.3/auxprogs/bam2hints``目录下MakeFile文件内容：
+```
+Add:
+BAMTOOLS = /your/path/to/bamtools
+
+Replace:
+INCLUDES = /usr/include/bamtools
+By:
+INCLUDES = $(BAMTOOLS)/include
+
+Replace:
+LIBS = -lbamtools -lz
+By:
+LIBS = $(BAMTOOLS)/lib/libbamtools.a -lz
+```
+再修改``augustus-3.2.3/auxprogs/filterBam/src``目录下MakeFile文件内容：
+```
+Replace:
+
+BAMTOOLS = /usr/include/bamtools
+By:
+BAMTOOLS = /your/path/to/bamtools
+
+Replace:
+INCLUDES = -I$(BAMTOOLS) -Iheaders -I./bamtools
+By:
+INCLUDES = -I$(BAMTOOLS)/include -Iheaders -I./bamtools
+
+Replace:
+LIBS = -lbamtools -lz
+By:
+LIBS = $(BAMTOOLS)/lib/libbamtools.a -lz
+```
+**3. ``make``安装**
+最后回到主目录``augustus-3.2.3``下``make``即可安装成功，不需要``make install``过程。
 ##参考来源
 <li><a href="https://blog.liyang.io/301.html" target="_blank">解决/lib64/libc.so.6: version `GLIBC_2.14′ not found问题</a></li>
 <li><a href="http://blog.csdn.net/anda0109/article/details/39229597" target="_blank"> [error]LD_LIBRARY_PATH shouldn't contain the current directory</a></li>

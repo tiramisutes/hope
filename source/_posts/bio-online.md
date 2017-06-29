@@ -11,7 +11,7 @@ categories: Bioinformatics
 <a href="http://linux1.softberry.com/berry.phtml?topic=fgenesh&group=programs&subgroup=gfind" target="_blank">FGENESH</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/fgenesh.png)
 ### phylogenetic
-<a href="http://itol.embl.de/index.shtml" target="_blank"> iTO</a>
+<a href="http://itol.embl.de/index.shtml" target="_blank"> iTOL</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/itol.png)
 ### 启动子区预测
 <a href="http://www.cbs.dtu.dk/services/SignalP/" target="_blank">Promoter Scan</a>

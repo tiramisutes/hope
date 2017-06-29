@@ -1,12 +1,11 @@
-title: De Nove转录组组装质量评估
+﻿title: De Nove转录组组装质量评估
 Total word: WordCount
 Read time: Min2Read
 date: 2016-10-30 23:00:17
 tags: De Nove
 categories: Bioinformatics
 ---
-无参De Nove组装通常用到**<a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki" target="_blank">Trinity</a>**软件,组装过程中最重要的两个参数就是
-``--min_kmer_cov`` 和 ``--min_glue``为组装出高质量结果我们通常需要去尝试用不同的参数，github上也有软件开发者讨论关于这两个参数**<a href="https://github.com/trinityrnaseq/trinityrnaseq/issues/92" target="_blank">Optimizing parameters</a>**可供参考，其实问题最终也就归结为你是否关心你数据中的低丰度转录本?
+无参De Nove组装通常用到**<a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki" target="_blank">Trinity</a>**软件,组装过程中最重要的两个参数就是``--min_kmer_cov`` 和 ``--min_glue``为组装出高质量结果我们通常需要去尝试用不同的参数，github上也有软件开发者讨论关于这两个参数**<a href="https://github.com/trinityrnaseq/trinityrnaseq/issues/92" target="_blank">Optimizing parameters</a>**可供参考，其实问题最终也就归结为你是否关心你数据中的低丰度转录本?
 此外作者也提供了一系列方法来评估组装质量**<a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki/Transcriptome-Assembly-Quality-Assessment" target="_blank">Transcriptome Assembly Quality Assessment</a>**总共列出6种方法可对不同参数的组装结果进行评估,看完后综合总结出其中4种评估方法。
 ##Assessing the Read Content of the Transcriptome Assembly
 ``` bash
