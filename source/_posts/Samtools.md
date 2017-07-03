@@ -23,7 +23,7 @@ Read Group. 1个sample的测序结果为1个Read Group；该sample可以有多�
 比对所使用的软件。
 
 比对区11个列和可选列的解释
-1  QNAME  比对的序列名
+1  QNAME  比对的序列名,即单端或双端fa/fq 中的reads编号
 2  FLAG   Bwise FLAG(表明比对类型：pairing，strand，mate strand等)
 3  RNAME  比对上的参考序列名
 4  POS    1-Based的比对上的最左边的定位
@@ -46,6 +46,46 @@ Read Group. 1个sample的测序结果为1个Read Group；该sample可以有多�
 ![](http://7xk19o.com1.z0.glb.clouddn.com/cigar.png)
 对于mRNA到基因组的比对，N表示内含子。
 More: http://samtools.github.io/hts-specs/SAMv1.pdf
+## sam文件的几个特例解释
+###Unmapped reads 统计
+Each alignment is one line of the SAM file, but not all lines are successful alignments. **Unmapped reads在sam文件中的标记：``FLAG``列为4而且``RNAME``列为星号*；**
+```
+#统计包含星号的比对行数
+cut -f3 smallRNA-seq.sam | grep -c \*
+#总的比对行数
+grep -c -v "^@" smallRNA-seq.sam
+```
+###How many different read IDs are in the file?
+The query (read) ID is in field 1. Some reads may have multiple alignments, so the number of lines is not necessarily the number of reads.
+```
+grep -v "@" HR-1B.fq.gz.sam | cut -f1 | sort | uniq | wc -l 
+#同时统计此次比对的单端/双端 fa/fq文件发现两者结果不同，说明确实有些reads未能比对上去。
+zcat pepper/RNA-seq/sgs-clean-reads/HR-1B.fq.gz | wc -l
+```
+###How many different read sequences are in the file?
+第一列的reads ID仅能表示测序过程中的不同reads，但他们的序列可能因为PCR扩增原因或文库偏好而完全相同，所以统计第10列的uniq序列数能够准确的表示reads总数。
+```
+cut -f10 smallRNAseq.sam | sort | uniq | wc -l 
+```
+###How many reads are **uniquely mapped**?
+```
+cut -f10 smallRNAseq.sam | sort | uniq -u | wc -l 
+```
+对于 BWA比对结果也可用``grep -c XT:A:U smallRNA-seq.sam``来准确统计。
+###How many reads are **multi-hits**?
+```
+cut -f1 smallRNA-seq.sam | sort | uniq -d | wc -l
+```
+对于 BWA比对结果也可用``grep -c XT:A:R smallRNAseq.sam``来准确统计。
+### How many alignments are reported for each read? 
+```
+grep -v "^@" smallRNA-seq.sam | cut -f1 | sort | uniq -c | sort -nr > sortedreadcount.txt
+grep -v "^@" smallRNA-seq.sam | cut -f1 |sort | uniq -c | sort -nr | cut -c1-8 | sort | uniq -c
+```
+###How many different reference sequences are represented in the file?
+```
+grep -v "^@" smallRNA-seq.sam | cut –f3 | sort | uniq | wc -l
+```
 ##view
 -c	计数
 -f	返回指定区间/flags比对结果

@@ -6,7 +6,7 @@ categories: R
 ##单因子方差分析
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;方差分析(analysis of variance, 简写为ANOVA)是工农业生产和科学研究中分析试验数据的一种有效的统计方法. 引起观测值不同(波动)的原因主要有两类: 一类是试验过程中随机因素的干扰或观测误差所引起不可控制的的波动, 另一类则是由于试验中处理方式不同或试验条件不同引起的可以控制的波动. 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**方差分析**的主要工作就是将观测数据的总变异(波动)按照变异的原因的不同分解为因子效应与试验误差，并对其作出数量分析，发现多组数据之间的差异显著行，比较各种原因在总变异中所占的重要程度，以此作为进一步统计推断的依据.
-在进行方差分析之前先对几条假设进行检验，由于随机抽取，假设总体满足独立、正态，考察方差齐次性（用bartlett检验）.
+**在进行方差分析之前先对几条假设进行检验，由于随机抽取，假设总体满足独立、正态，考察方差齐次性（用bartlett检验）.**
 <iframe width="420" height="315" src="https://www.youtube.com/embed/bklkCjiY3E0" frameborder="0" allowfullscreen></iframe>
 ###正态性检验
 在进行方差分析前先对输入数据做正态性检验。
@@ -27,10 +27,10 @@ W = 0.9084, p-value = 0.2699
 ```
 更多正态性检验见：<a href="http://www.cnblogs.com/blueicely/archive/2013/01/08/2850929.html" target="_blank">R语言做正态分布检验</a>
 其中，**D检验(Kolmogorov - Smirnov)是比较精确的正态检验法。**
-<li>**SPSS 规定:当样本含量3 ≤n ≤5000 时,结果以Shapiro - Wilk (W 检验) 为难,当样本含量n > 5000 结果以Kolmogorov - Smirnov 为准。**</li>
+<li>**SPSS 规定:当样本含量3 ≤n ≤5000 时,结果以Shapiro - Wilk (W 检验) 为准,当样本含量n > 5000 结果以Kolmogorov - Smirnov 为准。**</li>
 <li>**SAS 规定:当样本含量n ≤2000 时,结果以Shapiro - Wilk (W 检验) 为准,当样本含量n >2000 时,结果以Kolmogorov - Smirnov (D 检验) 为准。**</li>
 ###方差齐性检验
-方差分析的另一个假设：方差齐性，需要检验不同水平卜的数据方差是否相等。R中最常用的Bartlett检验,bartlett.test()调用格式为
+方差分析的另一个假设：方差齐性，需要检验不同水平下的数据方差是否相等。R中最常用的是Bartlett检验,bartlett.test()调用格式为
 ``` bash
 bartlett.test(x，g…)
 ```
