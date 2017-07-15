@@ -699,3 +699,4 @@ show_histogram  = yes
 ## 参考链接
 1. [Circos教程(二):基础使用](http://starsyi.github.io/2016/06/23/Circos%E6%95%99%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/)
 2. [陈连福：Circos的安装和简单使用](http://www.chenlianfu.com/?p=2342)
+3. [Circos tutorial](https://irenexzwen.gitbooks.io/hello-gitbook/content/)

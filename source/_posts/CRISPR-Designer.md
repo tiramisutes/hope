@@ -55,6 +55,7 @@ perl sgRNAcas9_3.0.5.pl -i genome_cds.fa -x 20 -l 40 -m 60 -g genome.fa -o b -t 
 运行完后会生成report文件：sgRNAcas9.report_20.b.rhp.fa，包含以下内容：
 ![](http://7xk19o.com1.z0.glb.clouddn.com/sgRNAreport.png)
 ![](http://7xk19o.com1.z0.glb.clouddn.com/How_to_use_sgRNAcas9.jpg)
+注：OT为靶标去除NGG后的脱靶情况，即NGG前面20个碱基的脱靶；POT为种子序列的脱靶情况，种子序列即NGG前面的12个碱基；
 sgRNAcas9_report.xls文件里有个综合了GC含量，错配和特异性后的风险等级排序，可简单选取Best对应crispr靶标位点。
 **Discard > High_risk > moderate_risk > low_risk > repeat_sites_or_bad ? > Best**
 当0M(on-/off-)值为0时意味着脱靶，大于1则存在有靶标序列，其他数字表示所存在靶标数目；

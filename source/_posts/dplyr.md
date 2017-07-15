@@ -65,6 +65,18 @@ n(): 计算个数 n_distinct(): 计算 x 中唯一值的个数. (原文为 count
 first(x), last(x) 和 nth(x, n): 返回对应秩的值, 类似于自带函数 x[1], x[length(x)], 和 x[n]
 ##连接符 %>%
 使用时把数据名作为开头, 然后依次对此数据进行多步操作.
+##join功能
+两数据集取交，并集等。
+- inner_join(x,y)  交集
+- semi_join(x,y) 
+- left_join(x,y)
+- anti_join(x,y)
+- inner_join(y,x)
+- semi_join(y,x)
+- left_join(y,x)
+- anti_join(y,x)
+- full_join(x,y)  并集
+【[Cheatsheet for dplyr join functions](http://stat545.com/bit001_dplyr-cheatsheet.html)】
 ##深入学习
 dplyr 包自带的60页<a href="http://cran.rstudio.com/web/packages/dplyr/dplyr.pdf" target="_blank">详细文档</a>.
 其余几个vignettes (<a href="http://cran.rstudio.com/web/packages/dplyr/vignettes/" target="_blank">网页</a>) 或 vignette(package = "dplyr"),包含了数据库相关, 混合编程, 运算性能比较, 以及新的 window-functions 等内容.
