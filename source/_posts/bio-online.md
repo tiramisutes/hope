@@ -2,8 +2,11 @@ title: 常用生物信息在线工具
 date: 2015-08-05 19:19:40
 tags: bio-online
 categories: Bioinformatics
+top: 998
 ---
-<i class="fa fa-volume-control-phone" aria-hidden="true"></i>**声明：本文所列工具均为较为初级的生物信息分析，只用于简单的分析过程，更加优秀的工具和准确的分析结果我也在不懈寻找中，同样也欢迎大家留言提供，一个分析结果最好是能够综合不同方式所得结果。**:herb:
+<i class="fa fa-volume-control-phone" aria-hidden="true"></i>**声明：本文所列工具均为较为初级的生物信息分析，只用于简单的分析过程，更加优秀的工具和准确的分析结果我也在不懈寻找中，同样也欢迎大家留言提供，一个分析结果最好是能够综合不同方式所得结果。**
+![](http://7xk19o.com1.z0.glb.clouddn.com/bioinfo3.png)
+<!--more-->
 ###韦恩图
 <a href="http://bioinfogp.cnb.csic.es/tools/venny/index.html" target="_blank">Venny2.0</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/ven.png)
@@ -115,3 +118,7 @@ S12	NApulia
 ###蛋白突变位点注释
 [MutationMapper: interprets mutations with protein annotations](http://www.cbioportal.org/mutation_mapper.jsp)
 ![](http://7xk19o.com1.z0.glb.clouddn.com/M.png)
+### regulatory genes 分析
+**Transcription factors, transcription regulators, and chromatin regulators, collectively referred to as regulatory genes.**
+[PlantTFcat: An Online Plant Transcription Factor and Transcriptional Regulator Categorization and Analysis Tool](http://plantgrn.noble.org/PlantTFcat/)
+![](http://7xk19o.com1.z0.glb.clouddn.com/PlantTF.jpg)
