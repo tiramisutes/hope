@@ -42,6 +42,7 @@ Read Group. 1个sample的测序结果为1个Read Group；该sample可以有多�
 ![](http://7xk19o.com1.z0.glb.clouddn.com/flag.png)
 **0x800** 表明相应位置的比对属于嵌合体比对；
 **0x4** 没有map上的reads；
+![](http://7xk19o.com1.z0.glb.clouddn.com/sam_output2.png)
 <li>**CIGAR部分**</li>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/cigar.png)
 对于mRNA到基因组的比对，N表示内含子。
