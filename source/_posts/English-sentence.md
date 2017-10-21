@@ -11,7 +11,7 @@ categories: Paper
 <li>Blood is a special biofluid, as it potentially reflects all processes going on in all organs. This can be both a blessing and a curse, as metabolite perturbations in the blood, while easily detectable, cannot be easily traced to a specific organ or a specific cause.</li>
 <li>On a cellular level, organisms face two main challenges: to maintain genome integrity in the face of mutagens and mobile genetic elements, and to express a specific repertoire of genes at the proper level and with the appropriate timing.</li>
 <li>In sharp contrast to the low within-species genetic variation, differences between species-specific haplotypes were high.</li>
-<li></li>
+<li>Given the staggering crop losses that result from insect herbivory and the environmental problems associated with insecticide use, genomeenabled research on the natural mechanisms that plants use to defend themselves against insects will undoubtedly have not only ecological, but also agricultural relevance.</li>
 <li></li>
 <li></li>
 <li></li>

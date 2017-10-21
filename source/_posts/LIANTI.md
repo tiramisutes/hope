@@ -62,7 +62,7 @@ Linear Amplification via Transposon Insertion (LIANTI)
 > >3
 > tgccgtgattatagacactttt
 > ```
->  **y axis解释**the height of the y-axis is the maximum entropy for the given sequence type. (log<sup>2</sup> 4 = 2 bits for DNA/RNA, log<sup>2</sup> 20 = 4.3 bits for protein.)
+>  **y axis解释**the height of the y-axis is the maximum entropy for the given sequence type. (log<sup>2</sup> 4 = 2 bits for DNA/RNA, log<sup>2</sup> 20 = 4.3 bits for protein.)【[WebLogo: A Sequence Logo Generator](http://weblogo.berkeley.edu/Crooks-2004-GR-WebLogo.pdf)】
 >
 > ![WebLogo](http://7xk19o.com1.z0.glb.clouddn.com/WebLogo.png)
 

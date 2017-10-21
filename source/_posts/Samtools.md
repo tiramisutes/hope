@@ -145,6 +145,12 @@ $ samtools flagstat example.bam
 samtools还有个非常重要的命令mpileup，以前为pileup。该命令用于生成bcf文件，再使用bcftools进行SNP和Indel的分析。bcftools是samtool中附带的软件，在samtools的安装文件夹中可以找到。
 -f 来输入有索引文件的fasta参考序列；
 -g 输出到bcf格式。
+##depth
+计算每一个位点或者区域的测序深度；
+```
+samtools depth sorted.bam > sorted.bam.txt
+```
+一共得到3列以指标分隔符分隔的数据，第一列为染色体名称，第二列为位点，第三列为覆盖深度。
 <p></p>
 贡献来源
 http://www.plob.org/2014/01/26/7112.html
