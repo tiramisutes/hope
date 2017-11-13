@@ -4,7 +4,7 @@ Read time: Min2Read
 date: 2016-09-13 19:57:28
 tags: SCI
 categories: Paper
-top: 1000
+#top: 1000
 ---
 ![](http://7xk19o.com1.z0.glb.clouddn.com/purdue.png)
 <a href="#" class="myButton">Congratulations!</a> **My first SCI paper is published in scientific reports. A nice story about cottonseed and welcome reading.**

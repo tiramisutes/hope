@@ -1,4 +1,4 @@
-title: Cufflinks
+title: 转录组分析之--Cufflinks（很简单）
 date: 2015-07-25 17:31:08
 tags: Cufflinks
 categories: Bioinformatics

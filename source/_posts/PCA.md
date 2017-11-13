@@ -140,7 +140,7 @@ x1身高 x2体重 x3胸围 x4坐高
 > screeplot(pca,type="line",main="碎石图",lwd=2)
 >
 ```
-![](http://pic002.cnblogs.com/images/2012/366262/2012061816452819.jpg)
+![](http://7xk19o.com1.z0.glb.clouddn.com/PCAs.png)
 主成分1贡献率较高
 
 求相关矩阵
