@@ -66,7 +66,7 @@ ggplot2中包含的统计变换有如下多种：
 ![](http://7xk19o.com1.z0.glb.clouddn.com/stat.png)
 更多参见：https://www.zhihu.com/question/24779017
 ##Scales
-###控制<code>aes()</code>映射
+### 控制<code>aes()</code>映射
 Aesthetic (<code>aes()</code>) 映射仅仅是告诉一个变量应该映射到一个aesthetic，但并没有说明如何映射？例如，当我们用<code>aes(shape=x)</code>去映射一个变量到shape时，并没有说明用什么shape；同样的，<code>aes(color=z)</code>并无说明用什么颜色；通常在我们未定义这些时ggplot2会自动用默认值，而我们可以通过<em>scale</em>来修改这些值。
 在ggplot2中scales包括：
 <li>position</li>
@@ -75,7 +75,7 @@ Aesthetic (<code>aes()</code>) 映射仅仅是告诉一个变量应该映射到�
 <li>shape</li>
 <li>line type</li>
 <li>x,y</li>
-###修改方式
+### 修改方式
 ``` bash
 scale_<aesthetic>_<type>(name,limits,breaks,labels)
 通过键入scale_<tab>查看全部可修改函数。
@@ -89,21 +89,21 @@ scale_color_continuous(name="",
                          low = "blue", high = "red")
 ```
 ![](http://7xk19o.com1.z0.glb.clouddn.com/modifyScales3.png)
-##Faceting
-###分面: 一页多图
+## Faceting
+### 分面: 一页多图
 <code>facet_wrap()</code>：对数据分类只能应用一个标准，例<code>facet_wrap(~State, ncol = 10))</code>,按State分组后每行设置10个小图依次画出全部。
 <code>facet_grid()</code>：多个标准对数据进行分组绘图,<code>facet_grid(color~cut，margins=TRUE)</code>，波浪号前为小图分行标准，后面为分列标准，margins指用于分面的包含每个变量元素所有数据的数据组，相当于每个小图一个title。
-##Themes
-###主题
+## Themes
+### 主题
 更多ggplot2主题演示如下：
 http://docs.ggplot2.org/dev/vignettes/themes.html
 https://github.com/jrnold/ggthemes
-###修改主题默认值
+### 修改主题默认值
 ``` bash
 theme_minimal() +
   theme(text = element_text(color = "turquoise"))
 ```
-###自定义主题
+### 自定义主题
 ``` bash
 theme_new <- theme_bw() +
   theme(plot.background = element_rect(size = 1, color = "blue", fill = "black"),
@@ -115,7 +115,7 @@ theme_new <- theme_bw() +
 
 p5 + theme_new
 ```
-##关于晕晕的aes()
+## 关于晕晕的aes()
 <li><strong>任何与数据向量顺序相关，需要逐个指定的参数都必须写在aes里</strong></li>
 <li>什么？还是搞不清该放aes里面还是外面？那就记着想统一整个图层时就放到aes外，想分成不同组调整，并且已经有一个与x、y长度一致的分组变量了，那就放到aes里</li>
 ##其他总结

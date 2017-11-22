@@ -10,6 +10,9 @@ top: 998
 ###韦恩图
 <a href="http://bioinfogp.cnb.csic.es/tools/venny/index.html" target="_blank">Venny2.0</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/ven.png)
+### 升级版韦恩图
+[jvenn: 可做到6个](http://jvenn.toulouse.inra.fr/app/example.html)
+![](https://i.imgur.com/8ZGkYUr.png)
 ###基因预测
 <a href="http://linux1.softberry.com/berry.phtml?topic=fgenesh&group=programs&subgroup=gfind" target="_blank">FGENESH</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/fgenesh.png)
@@ -122,3 +125,8 @@ S12	NApulia
 **Transcription factors, transcription regulators, and chromatin regulators, collectively referred to as regulatory genes.**
 [PlantTFcat: An Online Plant Transcription Factor and Transcriptional Regulator Categorization and Analysis Tool](http://plantgrn.noble.org/PlantTFcat/)
 ![](http://7xk19o.com1.z0.glb.clouddn.com/PlantTF.jpg)
+### 密码子偏好性 (Codon Optimization)
+[Codon Optimization On-Line (COOL)](http://cool.syncti.org/setup_input_sequence_create_wf1.php? "Codon Optimization On-Line (COOL)")
+![](http://cool.syncti.org/images/Aminoacids_table.svg)
+[Codon Optimization Tool：Integrated DNA Technologies](https://www.idtdna.com/CodonOpt)
+![](http://7xk19o.com1.z0.glb.clouddn.com/mimazi.jpg)
