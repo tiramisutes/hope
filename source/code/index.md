@@ -8,3 +8,4 @@
 <li><a href="http://pan.baidu.com/s/1kV0hPUB" target="_blank" id="perl-link">English for Writing Research Papers.pdf</a>，English</li>
 <li><a href="http://www.greenteapress.com/thinkpython/html/index.html" target="_blank" id="perl-link">Think Python: How to Think Like a Computer Scientist</a>，English</li>
 <li><a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" id="perl-link">正则表达式30分钟入门教程</a>，English</li>
+<li><a href="http://7xk19o.com1.z0.glb.clouddn.com/A%20Beginner%E2%80%99s%20Guide%20to%20Learn%20R%20Programming.pdf" target="_blank" id="perl-link">A Beginner’s Guide to Learn R Programming</a>，English</li>
