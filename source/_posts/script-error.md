@@ -30,12 +30,17 @@ npm config set https-proxy null
 npm install -g XXXX
 ```
 ##python报错
-``re``模块正则匹配时报错
+### 1. re模块正则匹配时报错
 ```
 AttributeError: 'NoneType' object has no attribute 'group'
 ```
 **<a href="http://www.cnblogs.com/zhoujinyi/p/3159903.html" target="_blank">解决办法</a>**
 写的正则表达式匹配不到任何内容，检查正则表达式正确性。
+### 2. lib库报错
+```
+error while loading shared libraries: libpython2.7.so.1.0: cannot open shared object file: No such file or directory
+```
+添加python的lib库地址到环境变量即可。
 ##生信软件安装报错
 make编译过程报错
 ```

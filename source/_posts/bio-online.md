@@ -20,7 +20,7 @@ top: 998
 <a href="http://itol.embl.de/index.shtml" target="_blank"> iTOL</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/itol.png)
 ### 启动子区预测
-<a href="http://www.cbs.dtu.dk/services/SignalP/" target="_blank">Promoter Scan</a>
+<a href="https://www-bimas.cit.nih.gov/molbio/proscan/" target="_blank">Promoter Scan</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/promot.png)
 ### 蛋白质一级结构分析
 <a href="https://www.predictprotein.org/home" target="_blank">PredictProte</a>
@@ -130,3 +130,6 @@ S12	NApulia
 ![](http://cool.syncti.org/images/Aminoacids_table.svg)
 [Codon Optimization Tool：Integrated DNA Technologies](https://www.idtdna.com/CodonOpt)
 ![](http://7xk19o.com1.z0.glb.clouddn.com/mimazi.jpg)
+### 序列格式转换(Sequence Format Conversion)
+[EMBOSS Seqret](https://www.ebi.ac.uk/Tools/sfc/emboss_seqret/)
+![](http://7xk19o.com1.z0.glb.clouddn.com/seqret.png)
