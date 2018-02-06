@@ -52,8 +52,14 @@ top: 998
 <a href="http://cotton.hzau.edu.cn/EN/tools/BioERCP/simitrix.php" target="_blank">SimiTriX-SimiTetra</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/3wei.png)
 ![](http://7xk19o.com1.z0.glb.clouddn.com/4wei.png)
+### 多序列比对可视化
+[MView: A multiple alignment viewer](https://www.ebi.ac.uk/Tools/msa/mview/)
+![](http://1.bp.blogspot.com/-p3kwT7fPMI0/ViiwqI7woiI/AAAAAAAAAv0/JzbUGqEkVCY/s1600/aln1.tiff)
+### 过滤多序列比对结果
+[GUIDANCE2 Server: Server for alignment confidence score](http://guidance.tau.ac.il/ver2/)
+![](http://7xk19o.com1.z0.glb.clouddn.com/gtree.png)
 ### 绘制GO注释结果
-<a href="http://wego.genomics.org.cn/cgi-bin/wego/index.pl" target="_blank">WEGO：Web Gene Ontology Annotation Plotting</a>
+<a href="http://wego.genomics.org.cn/" target="_blank">WEGO：Web Gene Ontology Annotation Plotting</a>
 ![](http://7xk19o.com1.z0.glb.clouddn.com/wego.png)
 ###蛋白质
 <a href="http://pfam.xfam.org/search#tabview=tab1" target="_blank">Pfam database</a>
@@ -133,3 +139,6 @@ S12	NApulia
 ### 序列格式转换(Sequence Format Conversion)
 [EMBOSS Seqret](https://www.ebi.ac.uk/Tools/sfc/emboss_seqret/)
 ![](http://7xk19o.com1.z0.glb.clouddn.com/seqret.png)
+### 真菌效应蛋白预测
+[EffectorP: predicting fungal effector proteins from secretomes using machine learning](http://effectorp.csiro.au/)
+![](http://7xk19o.com1.z0.glb.clouddn.com/fungal.png)
