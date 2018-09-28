@@ -1,0 +1,10 @@
+替换侧边栏的背景色：F:\hope\themes\next\source\css\_common\components\sidebar\sidebar.styl
+F:\hope\themes\next\layout\_partials\footer.swig   修改页面最底面，包括访问量统计，百度站点自动推送（http://www.joryhe.com/2016-05-31-baidu_google_both_tijiao.html）
+阅读次数添加：
+F:\hope\themes\next\layout\_macro\post.swig   124-141行插入代码设置的是文章字数、文章阅读时长,http://www.joryhe.com/2016-06-06-hexo_wordcount_setting_your_post.html
+F:\hope\themes\next\layout\_macro\post.swig   208行添加文章每页底面固定内容
+加载速度优化：http://lukang.me/2014/hexo-page-speed.html
+
+F:\hope\copyright.md  文件可以添加内容，然后在每页文章的底面版权上和文章末尾之间显示出来，可以添加文本和html语法
+
+自带版权修改F:\hope\themes\next\layout\_macro\post-copyright.swig
