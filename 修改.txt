@@ -1,11 +1,12 @@
-æ›¿æ¢ä¾§è¾¹æ çš„èƒŒæ™¯è‰²ï¼šF:\hope\themes\next\source\css\_common\components\sidebar\sidebar.styl
-F:\hope\themes\next\layout\_partials\footer.swig   ä¿®æ”¹é¡µé¢æœ€åº•é¢ï¼ŒåŒ…æ‹¬è®¿é—®é‡ç»Ÿè®¡ï¼Œç™¾åº¦ç«™ç‚¹è‡ªåŠ¨æ¨é€ï¼ˆhttp://www.joryhe.com/2016-05-31-baidu_google_both_tijiao.htmlï¼‰
-é˜…è¯»æ¬¡æ•°æ·»åŠ ï¼š
-F:\hope\themes\next\layout\_macro\post.swig   124-141è¡Œæ’å…¥ä»£ç è®¾ç½®çš„æ˜¯æ–‡ç« å­—æ•°ã€æ–‡ç« é˜…è¯»æ—¶é•¿,http://www.joryhe.com/2016-06-06-hexo_wordcount_setting_your_post.html
-F:\hope\themes\next\layout\_macro\post.swig   208è¡Œæ·»åŠ æ–‡ç« æ¯é¡µåº•é¢å›ºå®šå†…å®¹
-åŠ è½½é€Ÿåº¦ä¼˜åŒ–ï¼šhttp://lukang.me/2014/hexo-page-speed.html
-
-F:\hope\copyright.md  æ–‡ä»¶å¯ä»¥æ·»åŠ å†…å®¹ï¼Œç„¶ååœ¨æ¯é¡µæ–‡ç« çš„åº•é¢ç‰ˆæƒä¸Šå’Œæ–‡ç« æœ«å°¾ä¹‹é—´æ˜¾ç¤ºå‡ºæ¥ï¼Œå¯ä»¥æ·»åŠ æ–‡æœ¬å’Œhtmlè¯­æ³•
-
-è‡ªå¸¦ç‰ˆæƒä¿®æ”¹F:\hope\themes\next\layout\_macro\post-copyright.swig
-
+F:\hope\themes\jacman\layout\_partial\after_footer.ejs  ĞŞ¸Ä·ÖÏí±êÇ©
+F:\hope\themes\jacman\layout\_partial\post\pagination.ejs ĞŞ¸ÄÉÏÒ»ÆªºÍÏÂÒ»Æª
+F:\hope\themes\jacman\layout\_partial\footer.ejs ĞŞ¸Äµ×²¿ÄÚÈİ£¬gostatsÍøÕ¾Í³¼Æ
+F:\hope\themes\jacman\languages\default.yml ĞŞ¸ÄblogÓïÑÔ
+F:\hope\themes\jacman\layout\_partial\search.ejs  ĞŞ¸ÄËÑË÷½á¹û
+F:\hope\themes\jacman\layout\_partial\head.ejs   Ìí¼Ó<link href="/css/font-awesome.min.css" rel="stylesheet"><link href="/css/font-awesome.min.css" rel="stylesheet">ÓÃÀ´ÏÔÊ¾Ğ¡Í¼±ê£¨http://www.bootcss.com/p/font-awesome/#integration£©
+F:\hope\themes\jacman\source\font   ĞŞ¸Ä×ÖÌåÎÄ¼ş
+F:\hope\themes\jacman\source\css    ĞŞ¸Ä×ÖÌåÏàÓ¦µÄcss
+F:\hope\themes\jacman\layout\_partial\header.ejs   ĞŞ¸ÄÄ¿Â¼²¢Ìí¼ÓÍ¼±ê
+F:\hope\themes\jacman\layout\_partial\head.ejs     ĞŞ¸Äindex.htmlÊ×Ò³<head>..</head>¼äÄÚÈİ£¬Ìí¼Ó°Ù¶ÈÍ³¼ÆºÍ°Ù¶È¹È¸èÍøÕ¾ÑéÖ¤Âë
+F:\hope\scripts\new.js                             hexo new ĞÂ½¨ÎÄÕÂºó×Ô¶¯ÓÃ±à¼­Æ÷´ò¿ª
+F:\hope\themes\next\languages                      ĞŞ¸ÄmeanÄÚÈİ
