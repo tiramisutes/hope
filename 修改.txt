@@ -1,10 +1,23 @@
-�滻������ı���ɫ��F:\hope\themes\next\source\css\_common\components\sidebar\sidebar.styl
-F:\hope\themes\next\layout\_partials\footer.swig   �޸�ҳ������棬����������ͳ�ƣ��ٶ�վ���Զ����ͣ�http://www.joryhe.com/2016-05-31-baidu_google_both_tijiao.html��
-�Ķ��������ӣ�
-F:\hope\themes\next\layout\_macro\post.swig   124-141�в���������õ������������������Ķ�ʱ��,http://www.joryhe.com/2016-06-06-hexo_wordcount_setting_your_post.html
-F:\hope\themes\next\layout\_macro\post.swig   208����������ÿҳ����̶�����
-�����ٶ��Ż���http://lukang.me/2014/hexo-page-speed.html
+替换侧边栏的背景色：F:\hope\themes\next\source\css\_common\components\sidebar\sidebar.styl
+F:\hope\themes\next\layout\_partials\footer.swig   修改页面最底面，包括访问量统计，百度站点自动推送（http://www.joryhe.com/2016-05-31-baidu_google_both_tijiao.html）
+阅读次数添加：
+F:\hope\themes\next\layout\_macro\post.swig   124-141行插入代码设置的是文章字数、文章阅读时长,http://www.joryhe.com/2016-06-06-hexo_wordcount_setting_your_post.html
+F:\hope\themes\next\layout\_macro\post.swig   208行添加文章每页底面固定内容
+加载速度优化：http://lukang.me/2014/hexo-page-speed.html
 
-F:\hope\copyright.md  �ļ������������ݣ�Ȼ����ÿҳ���µĵ����Ȩ�Ϻ�����ĩβ֮����ʾ���������������ı���html�﷨
+F:\hope\copyright.md  文件可以添加内容，然后在每页文章的底面版权上和文章末尾之间显示出来，可以添加文本和html语法
 
-�Դ���Ȩ�޸�F:\hope\themes\next\layout\_macro\post-copyright.swig
+自带版权修改F:\hope\themes\next\layout\_macro\post-copyright.swig
+
+
+
+Ìæ»»²à±ßÀ¸µÄ±³¾°É«£ºF:\hope\themes\next\source\css\_common\components\sidebar\sidebar.styl
+F:\hope\themes\next\layout\_partials\footer.swig   ÐÞ¸ÄÒ³Ãæ×îµ×Ãæ£¬°üÀ¨·ÃÎÊÁ¿Í³¼Æ£¬°Ù¶ÈÕ¾µã×Ô¶¯ÍÆËÍ£¨http://www.joryhe.com/2016-05-31-baidu_google_both_tijiao.html£©
+ÔÄ¶Á´ÎÊýÌí¼Ó£º
+F:\hope\themes\next\layout\_macro\post.swig   124-141ÐÐ²åÈë´úÂëÉèÖÃµÄÊÇÎÄÕÂ×ÖÊý¡¢ÎÄÕÂÔÄ¶ÁÊ±³¤,http://www.joryhe.com/2016-06-06-hexo_wordcount_setting_your_post.html
+F:\hope\themes\next\layout\_macro\post.swig   208ÐÐÌí¼ÓÎÄÕÂÃ¿Ò³µ×Ãæ¹Ì¶¨ÄÚÈÝ
+¼ÓÔØËÙ¶ÈÓÅ»¯£ºhttp://lukang.me/2014/hexo-page-speed.html
+
+F:\hope\copyright.md  ÎÄ¼þ¿ÉÒÔÌí¼ÓÄÚÈÝ£¬È»ºóÔÚÃ¿Ò³ÎÄÕÂµÄµ×Ãæ°æÈ¨ÉÏºÍÎÄÕÂÄ©Î²Ö®¼äÏÔÊ¾³öÀ´£¬¿ÉÒÔÌí¼ÓÎÄ±¾ºÍhtmlÓï·¨
+
+×Ô´ø°æÈ¨ÐÞ¸ÄF:\hope\themes\next\layout\_macro\post-copyright.swig
