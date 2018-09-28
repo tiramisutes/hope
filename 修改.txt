@@ -9,15 +9,3 @@ F:\hope\copyright.md  文件可以添加内容，然后在每页文章的底面�
 
 自带版权修改F:\hope\themes\next\layout\_macro\post-copyright.swig
 
-
-
-Ìæ»»²à±ßÀ¸µÄ±³¾°É«£ºF:\hope\themes\next\source\css\_common\components\sidebar\sidebar.styl
-F:\hope\themes\next\layout\_partials\footer.swig   ÐÞ¸ÄÒ³Ãæ×îµ×Ãæ£¬°üÀ¨·ÃÎÊÁ¿Í³¼Æ£¬°Ù¶ÈÕ¾µã×Ô¶¯ÍÆËÍ£¨http://www.joryhe.com/2016-05-31-baidu_google_both_tijiao.html£©
-ÔÄ¶Á´ÎÊýÌí¼Ó£º
-F:\hope\themes\next\layout\_macro\post.swig   124-141ÐÐ²åÈë´úÂëÉèÖÃµÄÊÇÎÄÕÂ×ÖÊý¡¢ÎÄÕÂÔÄ¶ÁÊ±³¤,http://www.joryhe.com/2016-06-06-hexo_wordcount_setting_your_post.html
-F:\hope\themes\next\layout\_macro\post.swig   208ÐÐÌí¼ÓÎÄÕÂÃ¿Ò³µ×Ãæ¹Ì¶¨ÄÚÈÝ
-¼ÓÔØËÙ¶ÈÓÅ»¯£ºhttp://lukang.me/2014/hexo-page-speed.html
-
-F:\hope\copyright.md  ÎÄ¼þ¿ÉÒÔÌí¼ÓÄÚÈÝ£¬È»ºóÔÚÃ¿Ò³ÎÄÕÂµÄµ×Ãæ°æÈ¨ÉÏºÍÎÄÕÂÄ©Î²Ö®¼äÏÔÊ¾³öÀ´£¬¿ÉÒÔÌí¼ÓÎÄ±¾ºÍhtmlÓï·¨
-
-×Ô´ø°æÈ¨ÐÞ¸ÄF:\hope\themes\next\layout\_macro\post-copyright.swig
